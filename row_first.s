@@ -1,17 +1,17 @@
 .data
 num:    .word 0,1,2,3,4,5
 result:    .word 0,0,0
-row:    .byte 2
-col:    .byte 3
+row:    .word 2
+col:    .word 3
 
 .text
 
 main:
     la a0,col
-    lb a0,0(a0)
+    lw a0,0(a0)
     mv t1,a0
     la a0,row
-    lb a0,0(a0)
+    lw a0,0(a0)
     mv t2,a0
     la t4,num
     la t6,result
